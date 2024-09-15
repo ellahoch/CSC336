@@ -1,0 +1,77 @@
+body {
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(39, 39, 39);
+    font-size: 11pt;
+    margin: 5px;
+}
+
+h1, h2, h3 {
+    margin: 4px;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20pt;
+   
+
+}
+
+h2 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 10pt;
+    
+}
+
+h3 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13pt;
+    font-weight: 550;
+}
+
+h4 {
+    text-align: left;
+    font-weight: 600;
+    font-size: 13pt;
+    background-color: rgb(173, 217, 216);
+    padding: 6px 0px 6px 70px;
+    text-transform: uppercase;
+}
+
+div.content {
+    padding: 0px 50px 0px 70px;
+}
+
+h5 {
+    font-weight: 600; 
+    display: flex;
+    justify-content: space-between;
+    font-size: 11pt;
+    margin: 5px;
+}
+
+.date {
+    font-weight: normal; 
+    font-size: 11pt;
+    
+}
+
+
+.skills-columns {
+    display: flex;
+    justify-content: flex-start;
+    gap: 35%;
+}
+
+.skills-columns ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.skills-columns ul li {
+    margin-bottom: 5px;
+}

@@ -1,0 +1,183 @@
+<html>
+    <head>
+        <title>Chess</title>
+        <style>
+             body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height:100vh;
+                margin:0;
+             }
+
+            table{
+                margin: 0;
+                color: #48639c;
+                background-color: #f5f5dc;
+                border: 2px solid #48639c;
+                border-collapse:collapse;
+                padding:0;
+            }
+
+
+            th{
+                color:black;
+                width: 50px;
+                height: 50px;
+                text-align:center;
+                font-size: 20px; 
+            }
+
+            td{
+                width: 50px;
+                height: 50px;
+                text-align:center;
+            }
+
+            td img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+            td.light{
+                background-color: #48639c;
+                border-color: #48639c;
+            }
+
+            td.dark{
+                background-color: #f5f5dc;
+            }
+
+            td.left{
+                border-left: 2px solid #48639c;
+            }
+
+            tr.odd{
+                border: 2px solid #48639c;
+
+            }
+
+            td:hover::after{
+                content: attr(data-position);
+                position: absolute;
+                font-size: 18px;
+                background-color: white;
+                padding: 5px;
+                border-radius: 3px; 
+                border: 1px solid black; 
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!--Chess board section-->
+        <h1>Chess Match</h1>
+        <table>
+            <tr>
+                <th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th>
+            </tr>
+
+            <tr class="odd">
+                <td>1</td>
+                <td class="light" data-position = "A1"><img src = "C:\Users\jkimb\Downloads\noun-rook-194991.png" alt = "Rook"></td>
+                <td class = "dark" data-position = "B1"><img src = "C:\Users\jkimb\Downloads\noun-knight-194989.png" alt = "Knight"></td>
+                <td class="light" data-position = "C1"><img src = "C:\Users\jkimb\Downloads\noun-bishop-194985.png" alt = "Bishop"></td>
+                <td class = "dark" data-position = "D1"><img src = "C:\Users\jkimb\Downloads\noun-queen-194984.png" alt = "Queen"></td>
+                <td class="light" data-position = "E1"><img src = "C:\Users\jkimb\Downloads\noun-king-194983.png" alt = "King"></td>
+                <td class = "dark" data-position = "F1"><img src = "C:\Users\jkimb\Downloads\noun-bishop-194985.png" alt = "Bishop"></td>
+                <td class="light" data-position = "G1"><img src = "C:\Users\jkimb\Downloads\noun-knight-194989.png" alt = "Knight"></td>
+                <td class = "dark" data-position = "H1"><img src = "C:\Users\jkimb\Downloads\noun-rook-194991.png" alt = "Rook"></td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td class="left" data-position = "A2"><img src = "C:\Users\jkimb\Downloads\noun-pawn-194987.png" alt = "Pawn"></td>
+                <td class="light" data-position = "B2"><img src = "C:\Users\jkimb\Downloads\noun-pawn-194987.png" alt = "Pawn"></td>
+                <td class = "dark" data-position = "C2"><img src = "C:\Users\jkimb\Downloads\noun-pawn-194987.png" alt = "Pawn"></td>
+                <td class="light" data-position = "D2"><img src = "C:\Users\jkimb\Downloads\noun-pawn-194987.png" alt = "Pawn"></td>
+                <td class = "dark" data-position = "E2"><img src = "C:\Users\jkimb\Downloads\noun-pawn-194987.png" alt = "Pawn"></td>
+                <td class="light" data-position = "F2"><img src = "C:\Users\jkimb\Downloads\noun-pawn-194987.png" alt = "Pawn"></td>
+                <td class = "dark" data-position = "G2"><img src = "C:\Users\jkimb\Downloads\noun-pawn-194987.png" alt = "Pawn"></td>
+                <td class="light" data-position = "H2"><img src = "C:\Users\jkimb\Downloads\noun-pawn-194987.png" alt = "Pawn"></td>
+            </tr>
+
+            <tr class="odd">
+                <td>3</td>
+                <td class="light" data-position = "A3"></td>
+                <td class = "dark" data-position = "B3"></td>
+                <td class="light" data-position = "C3"></td>
+                <td class = "dark" data-position = "D3"></td>
+                <td class="light" data-position = "E3"></td>
+                <td class = "dark" data-position = "F3"></td>
+                <td class="light" data-position = "G3"></td>
+                <td class = "dark" data-position = "H3"></td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td class="left" data-position = "A4"></td>
+                <td class="light" data-position = "B4"></td>
+                <td class = "dark" data-position = "C4"></td>
+                <td class="light" data-position = "D4"></td>
+                <td class = "dark" data-position = "E4"></td>
+                <td class="light" data-position = "F4"></td>
+                <td class = "dark" data-position = "G4"></td>
+                <td class="light" data-position = "H4"></td>
+            </tr>
+
+            <tr class="odd">
+                <td>5</td>
+                <td class="light" data-position = "A5"></td>
+                <td class = "dark" data-position = "B5"></td>
+                <td class="light" data-position = "C5"></td>
+                <td class = "dark" data-position = "D5"></td>
+                <td class="light" data-position = "E5"></td>
+                <td class = "dark" data-position = "F5"></td>
+                <td class="light" data-position = "G5"></td>
+                <td class = "dark" data-position = "H5"></td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td class="left" data-position = "A6"></td>
+                <td class="light" data-position = "B6"></td>
+                <td class = "dark" data-position = "C6"></td>
+                <td class="light" data-position = "D6"></td>
+                <td class = "dark" data-position = "E6"></td>
+                <td class="light" data-position = "F6"></td>
+                <td class = "dark" data-position = "G6"></td>
+                <td class="light" data-position = "H6"></td>
+
+            </tr>
+            <tr class="odd">
+                <td>7</td>
+                <td class="light" data-position = "A7"><img src = "C:\Users\jkimb\Downloads\noun-pawn-5095675.png" alt = "Pawn"></td>
+                <td class = "dark" data-position = "B7"><img src = "C:\Users\jkimb\Downloads\noun-pawn-5095675.png" alt = "Pawn"></td>
+                <td class="light" data-position = "C7"><img src = "C:\Users\jkimb\Downloads\noun-pawn-5095675.png" alt = "Pawn"></td>
+                <td class = "dark" data-position = "D7"><img src = "C:\Users\jkimb\Downloads\noun-pawn-5095675.png" alt = "Pawn"></td>
+                <td class="light" data-position = "E7"><img src = "C:\Users\jkimb\Downloads\noun-pawn-5095675.png" alt = "Pawn"></td>
+                <td class = "dark" data-position = "F7"><img src = "C:\Users\jkimb\Downloads\noun-pawn-5095675.png" alt = "Pawn"></td>
+                <td class="light" data-position = "G7"><img src = "C:\Users\jkimb\Downloads\noun-pawn-5095675.png" alt = "Pawn"></td>
+                <td class = "dark" data-position = "H7"><img src = "C:\Users\jkimb\Downloads\noun-pawn-5095675.png" alt = "Pawn"></td>
+            </tr>
+
+            <tr>
+                <td>8</td>
+                <td class="left" data-position = "A8"><img src = "C:\Users\jkimb\Downloads\noun-rook-5095677.png" alt = "Rook"></td>
+                <td class="light" data-position = "B8"><img src = "C:\Users\jkimb\Downloads\noun-knight-5095679.png" alt = "Knight"></td>
+                <td class = "dark" data-position = "C8"><img src = "C:\Users\jkimb\Downloads\noun-bishop-5095678.png" alt = "Bishop"></td>
+                <td class="light" data-position = "D8"><img src = "C:\Users\jkimb\Downloads\noun-queen-5095674.png" alt = "Queen"></td>
+                <td class = "dark" data-position = "E8"><img src = "C:\Users\jkimb\Downloads\noun-king-5095676.png" alt = "King"></td>
+                <td class="light" data-position = "F8"><img src = "C:\Users\jkimb\Downloads\noun-bishop-5095678.png" alt = "Bishop"></td>
+                <td class = "dark" data-position = "G8"><img src = "C:\Users\jkimb\Downloads\noun-knight-5095679.png" alt = "Knight"></td>
+                <td class="light" data-position = "H8"><img src = "C:\Users\jkimb\Downloads\noun-rook-5095677.png" alt = "Rook"></td>
+            </tr>
+
+
+        </table>
+
+    </body>
+</html>

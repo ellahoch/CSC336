@@ -1,0 +1,19 @@
+body {
+    border: 5px solid green;
+}
+
+#journal {
+    border: 5px solid red;
+}
+
+#entries {
+    border: 5px solid blue;
+}
+
+#comment-feed {
+    border: 5px solid orange;
+}
+/* 
+#first-entry {
+    border: 5px solid orange;
+} */

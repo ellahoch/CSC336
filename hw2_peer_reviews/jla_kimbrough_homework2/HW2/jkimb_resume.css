@@ -1,0 +1,50 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px; 
+    background-color: white;
+}
+
+.resume{
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px; 
+    box-shadow: 1px solid gainsboro;
+}
+
+.personal-info{
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+h1{
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+}
+
+h2{
+    font-size: 20px; 
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 3px; 
+    margin-bottom: 15px;
+}
+
+p, ul{
+    margin: 0 0 10px;
+}
+
+.summary{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.job-responsibilities{
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.experience{
+    margin-bottom: 15px;
+}

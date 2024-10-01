@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chess Board</title>
+    <link rel="stylesheet" href="chess.css">
+</head>
+<body>
+    <h1>Sample Chess Board</h1>
+    <table>
+        <!-- Column Labels -->
+        <tr>
+            <th class="label"></th>
+            <th class="label">A</th>
+            <th class="label">B</th>
+            <th class="label">C</th>
+            <th class="label">D</th>
+            <th class="label">E</th>
+            <th class="label">F</th>
+            <th class="label">G</th>
+            <th class="label">H</th>
+        </tr>
+
+        <!-- Row 8 (Black Pieces) -->
+        <tr>
+            <th class="label">8</th>
+            <td class="white" data-position="A8"><img src="https://static.thenounproject.com/png/1403-200.png" alt="Black Rook"></td>
+            <td class="black" data-position="B8"><img src="https://static.thenounproject.com/png/3435251-200.png" alt="Black Knight"></td>
+            <td class="white" data-position="C8"><img src="https://static.thenounproject.com/png/889195-200.png" alt="Black Bishop"></td>
+            <td class="black" data-position="D8"><img src="https://static.thenounproject.com/png/889197-200.png" alt="Black Queen"></td>
+            <td class="white" data-position="E8"><img src="https://static.thenounproject.com/png/722242-200.png" alt="Black King"></td>
+            <td class="black" data-position="F8"><img src="https://static.thenounproject.com/png/889195-200.png" alt="Black Bishop"></td>
+            <td class="white" data-position="G8"><img src="https://static.thenounproject.com/png/3435251-200.png" alt="Black Knight"></td>
+            <td class="black" data-position="H8"><img src="https://static.thenounproject.com/png/1403-200.png" alt="Black Rook"></td>
+        </tr>
+
+        <!-- Row 7 (Black Pawns) -->
+        <tr>
+            <th class="label">7</th>
+            <td class="black" data-position="A7"><img src="https://static.thenounproject.com/png/4815574-200.png" alt="Black Pawn"></td>
+            <td class="white" data-position="B7"><img src="https://static.thenounproject.com/png/4815574-200.png" alt="Black Pawn"></td>
+            <td class="black" data-position="C7"><img src="https://static.thenounproject.com/png/4815574-200.png" alt="Black Pawn"></td>
+            <td class="white" data-position="D7"><img src="https://static.thenounproject.com/png/4815574-200.png" alt="Black Pawn"></td>
+            <td class="black" data-position="E7"><img src="https://static.thenounproject.com/png/4815574-200.png" alt="Black Pawn"></td>
+            <td class="white" data-position="F7"><img src="https://static.thenounproject.com/png/4815574-200.png" alt="Black Pawn"></td>
+            <td class="black" data-position="G7"><img src="https://static.thenounproject.com/png/4815574-200.png" alt="Black Pawn"></td>
+            <td class="white" data-position="H7"><img src="https://static.thenounproject.com/png/4815574-200.png" alt="Black Pawn"></td>
+        </tr>
+
+        <!-- Row 6 (Empty Squares) -->
+        <tr>
+            <th class="label">6</th>
+            <td class="white" data-position="A6"></td>
+            <td class="black" data-position="B6"></td>
+            <td class="white" data-position="C6"></td>
+            <td class="black" data-position="D6"></td>
+            <td class="white" data-position="E6"></td>
+            <td class="black" data-position="F6"></td>
+            <td class="white" data-position="G6"></td>
+            <td class="black" data-position="H6"></td>
+        </tr>
+
+        <!-- Row 5 (Empty Squares) -->
+        <tr>
+            <th class="label">5</th>
+            <td class="black" data-position="A5"></td>
+            <td class="white" data-position="B5"></td>
+            <td class="black" data-position="C5"></td>
+            <td class="white" data-position="D5"></td>
+            <td class="black" data-position="E5"></td>
+            <td class="white" data-position="F5"></td>
+            <td class="black" data-position="G5"></td>
+            <td class="white" data-position="H5"></td>
+        </tr>
+
+        <!-- Row 4 (Empty Squares) -->
+        <tr>
+            <th class="label">4</th>
+            <td class="white" data-position="A4"></td>
+            <td class="black" data-position="B4"></td>
+            <td class="white" data-position="C4"></td>
+            <td class="black" data-position="D4"></td>
+            <td class="white" data-position="E4"></td>
+            <td class="black" data-position="F4"></td>
+            <td class="white" data-position="G4"></td>
+            <td class="black" data-position="H4"></td>
+        </tr>
+
+        <!-- Row 3 (Empty Squares) -->
+        <tr>
+            <th class="label">3</th>
+            <td class="black" data-position="A3"></td>
+            <td class="white" data-position="B3"></td>
+            <td class="black" data-position="C3"></td>
+            <td class="white" data-position="D3"></td>
+            <td class="black" data-position="E3"></td>
+            <td class="white" data-position="F3"></td>
+            <td class="black" data-position="G3"></td>
+            <td class="white" data-position="H3"></td>
+        </tr>
+
+        <!-- Row 2 (White Pawns) -->
+        <tr>
+            <th class="label">2</th>
+            <td class="white" data-position="A2"><img src="https://static.thenounproject.com/png/692777-200.png" alt="White Pawn"></td>
+            <td class="black" data-position="B2"><img src="https://static.thenounproject.com/png/692777-200.png" alt="White Pawn"></td>
+            <td class="white" data-position="C2"><img src="https://static.thenounproject.com/png/692777-200.png" alt="White Pawn"></td>
+            <td class="black" data-position="D2"><img src="https://static.thenounproject.com/png/692777-200.png" alt="White Pawn"></td>
+            <td class="white" data-position="E2"><img src="https://static.thenounproject.com/png/692777-200.png" alt="White Pawn"></td>
+            <td class="black" data-position="F2"><img src="https://static.thenounproject.com/png/692777-200.png" alt="White Pawn"></td>
+            <td class="white" data-position="G2"><img src="https://static.thenounproject.com/png/692777-200.png" alt="White Pawn"></td>
+            <td class="black" data-position="H2"><img src="https://static.thenounproject.com/png/692777-200.png" alt="White Pawn"></td>
+        </tr>
+
+         <!-- Row 1 (White Pieces) -->
+         <tr>
+            <th class="label">1</th>
+            <td class="black" data-position="A1"><img src="https://static.thenounproject.com/png/3435242-200.png" alt="White Rook"></td>
+            <td class="white" data-position="B1"><img src="https://static.thenounproject.com/png/3435238-200.png" alt="White Knight"></td>
+            <td class="black" data-position="C1"><img src="https://static.thenounproject.com/png/3435243-200.png" alt="White Bishop"></td>
+            <td class="white" data-position="D1"><img src="https://static.thenounproject.com/png/722240-200.png" alt="White Queen"></td>
+            <td class="black" data-position="E1"><img src="https://static.thenounproject.com/png/1699699-200.png" alt="White King"></td>
+            <td class="white" data-position="F1"><img src="https://static.thenounproject.com/png/3435243-200.png" alt="White Bishop"></td>
+            <td class="black" data-position="G1"><img src="https://static.thenounproject.com/png/3435238-200.png" alt="White Knight"></td>
+            <td class="white" data-position="H1"><img src="https://static.thenounproject.com/png/3435242-200.png" alt="White Rook"></td>
+        </tr>
+    </table>
+</body>
+</html>
+

@@ -1,0 +1,52 @@
+
+body {
+    background-image: url('https://www.transparenttextures.com/patterns/purty-wood.png'); /* Example background image */
+    background-color: #f0f0f0;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 80%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+
+#journal {
+    border: 5px solid red;
+    background-color: white;
+    text-align: right;
+}
+
+
+#one-entry {
+    border: 5px solid blue;
+    background-color: #E8FBFB; /* okay background */
+    padding: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+h2 {
+    border: 5px solid orange;
+}
+
+#entries {
+    background-color: white; /* Keep the white background */
+    border: 5px solid green; /* background ok */
+}
+
+/* Date styling */
+#date {
+    border: 5px solid purple;
+}
+
+.entry-image {
+    width: auto;
+    height: 150px;
+    float: right;
+}
+
+p {
+    text-align: justify;
+}

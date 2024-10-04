@@ -6,14 +6,30 @@ body {
     border: 5px solid red;
 }
 
-#entries {
+/* #entries {
     border: 5px solid blue;
-}
+} */
 
-#comment-feed {
-    border: 5px solid orange;
-}
+
 /* 
 #first-entry {
     border: 5px solid orange;
 } */
+
+#one-entry {
+    border: 5px solid blue;
+}
+
+h2 {
+    border: 5px solid orange;
+}
+
+#date {
+    border: 5px solid purple;
+}
+
+.entry-image {
+    width: 200px; 
+    height: auto;  
+    margin-top: 10px; 
+}

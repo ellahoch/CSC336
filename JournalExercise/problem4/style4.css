@@ -13,7 +13,7 @@ body {
 }
 
 h1, h2, h3, p {
-    color: #008f8f;
+    color: #008484;
     font-weight: normal;
     font-family: 'Montserrat', sans-serif;
     
@@ -52,7 +52,7 @@ h2 {
     border: 10px solid white; /* background ok */
 }
 
-/* Date styling */
+
 #date {
     /* border: 5px solid purple; */
     border-bottom: 2px dashed #7aacac;

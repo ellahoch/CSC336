@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blackjack</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1">
+        <link rel="stylesheet" type="text/css" href="blackjack.css">
+        <script type="text/javascript" src="blackjack.js">
+        </script>
+    </head>
+
+    <body>
+        <div id="containter">
+        
+            <h1>
+                Blackjack Game
+            </h1>
+            <div id="game">
+                <div id="dealer">
+                    <h2>Dealer <span id="dealer-sum"></span></h2>
+                    <div id="dealer-hand">
+                        <img id="dealer-hidden" class="card" src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Card_back_01.svg">
+
+
+                    </div>
+                </div>
+
+                <div id="player">
+                    <div id="player1">
+                        <h2>Player 1 <span id="player1-sum"></span></h2>
+                        <div id="player1-hand">
+
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div id="buttons">
+                    <button class="player-button hit-button" id="player1-hit">
+                        Hit
+                    </button>
+                    <button class="player-button stay-button" id="player1-stay">Stay</button>
+
+                </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>

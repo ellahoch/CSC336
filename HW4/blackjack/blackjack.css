@@ -1,0 +1,44 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+.card {
+	width: 125px;
+	height: 175px;
+	margin: 1px;
+}
+
+.player-button {
+	width: 100px;
+	height: 50px;
+	font-size: 20px;
+}
+
+.hit-button {
+	background-color: green;
+	color: white;
+}
+.hit-button:hover {
+	background-color: rgb(0, 255, 0);
+	color: black;
+}
+
+.stay-button {
+	background-color: darkred;
+	color: white;
+}
+
+.stay-button:hover {
+	background-color: red;
+}
+
+.split-button {
+    background-color: blue;
+    color: white;
+}
+
+.split-button:hover {
+    background-color: lightblue;
+    color: black;
+}

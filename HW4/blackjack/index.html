@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blackjack</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="blackjack.css">
+	<script type="text/javascript" src="blackjack.js"></script>
+</head>
+<body>
+	<div id="container">
+		<h1>Blackjack Game</h1>
+		<div id="game">
+			<!-- Dealer area -->
+			<div id="dealer">
+				<h2>Dealer <span id="dealer-sum"></span></h2>
+				<div id="dealer-hand">
+					<img id="dealer-hidden" class="card" src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Card_back_01.svg">
+					<!-- Cards will be added here -->
+				</div>
+			</div>
+
+			<!-- Players area -->
+			<div id="players">
+				<div id="player1">
+					<h2>Player <span id="player1-sum">0</span></h2>
+					<div id="player1-hand">
+						<!-- Original or split hands will be appended here -->
+					</div>	
+					<!-- need to add div for split player cause it is looking for div that doesn't exist rn -->
+				</div>
+				
+			<div id="buttons">
+				<button id="player1-hit" class="player-button hit-button">Hit</button> 
+				<button id="player1-stay" class="player-button stay-button">Stay</button>
+				<button id="player1-split" class="player-button split-button" style="display:none;">Split</button> 
+			</div>
+		</div>
+		<div id="results"></div>
+		</div>
+	</div>
+</body>
+</html>

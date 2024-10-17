@@ -42,3 +42,21 @@ body {
     background-color: lightblue;
     color: black;
 }
+
+.reset-button {
+	background-color: purple;
+	color: white;
+}
+
+.reset-button:hover {
+	background-color: lightpink;
+	color: black;
+}
+
+.inactive {
+	background-color: gray;
+}
+
+.inactive:hover {
+	background-color: darkgray;
+}

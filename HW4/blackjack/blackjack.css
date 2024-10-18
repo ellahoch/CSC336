@@ -13,6 +13,7 @@ body {
 	width: 100px;
 	height: 50px;
 	font-size: 20px;
+	margin: 4px 6px;
 }
 
 .hit-button {
@@ -60,3 +61,7 @@ body {
 .inactive:hover {
 	background-color: darkgray;
 }
+
+/* .split-reset {
+	margin: 30px;
+} */

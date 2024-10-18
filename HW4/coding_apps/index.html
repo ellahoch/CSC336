@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coding Challenges</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="codingChallenges.js"></script>
+</head>
+
+<body>
+    <div id="problem-2">
+        <h2>Challenge 2: BMI calculations</h2>
+        <label for="massMark">Mark's Mass (kg):</label>
+        <input type="number" id="massMark"><br>
+
+        <label for="heightMark">Mark's Height (m):</label>
+        <input type="number" id="heightMark" step="0.01"><br>
+
+        <label for="massJohn">John's Mass (kg):</label>
+        <input type="number" id="massJohn"><br>
+
+        <label for="heightJohn">John's Height (m):</label>
+        <input type="number" id="heightJohn" step="0.01"><br>
+
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <p id="bmi-result"></p>
+    </div>
+
+    <div id="problem-3">
+        <h2>Challenge 3: Gymnastics scoring</h2>
+        <h3>Pandas' Scores</h3>
+        <label for="pandas1">Game 1:</label>
+        <input type="number" id="pandas1"><br>
+
+        <label for="pandas2">Game 2:</label>
+        <input type="number" id="pandas2"><br>
+
+        <label for="pandas3">Game 3:</label>
+        <input type="number" id="pandas3"><br>
+
+        <h3>Koalas' Scores</h3>
+        <label for="koalas1">Game 1:</label>
+        <input type="number" id="koalas1"><br>
+
+        <label for="koalas2">Game 2:</label>
+        <input type="number" id="koalas2"><br>
+
+        <label for="koalas3">Game 3:</label>
+        <input type="number" id="koalas3"><br>
+
+        <button onclick="calculateWinner()">Determine Winner</button>
+        <p id="score-result"></p>
+    </div>
+
+    <div id="problem-4">
+        <h2>Challenge 4: Tip calculator</h2>
+        <label for="billAmount">Bill Amount ($):</label>
+        <input type="number" id="billAmount"><br>
+
+        <button onclick="calculateTip()">Calculate Tip</button>
+        <p id="tip-result"></p>
+    </div>
+
+</body>
+</html>

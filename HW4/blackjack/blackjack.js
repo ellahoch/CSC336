@@ -13,6 +13,7 @@ let cards = new Map();
 
 function playerHitFunction() { hit(0); }
 function playerStayFunction() { stay(0); }
+function playerResetFunction() {resetGame(0);}
 
 
 
@@ -182,14 +183,14 @@ function startGame() {
 
     document.getElementById("player1-hit").addEventListener("click", playerHitFunction);
     document.getElementById("player1-stay").addEventListener("click", playerStayFunction);
-    document.getElementById("player1-reset").addEventListener("click", function() { resetGame(0); })
+    document.getElementById("player1-reset").addEventListener("click", playerResetFunction);
 }
 
 
 
 
 function getCardNameFromSrc(cards) {
-    let cardInfo = cardSrc.split("/").pop().split(".")[0];
+    let cardInfo = cards.split("/").pop().split(".")[0];
     return cardInfo.split("-")[0]; 
 }
 
@@ -199,13 +200,28 @@ function splitHand(player) {
     numberOfPlayers = 2;
 
     let playerHand = document.getElementById("player1-hand").getElementsByTagName("img");
+    // let cardVal = deck.pop();
+    // console.log("cardval: " +cardVal);
+    console.log("playerHand length: " +playerHand.length);
     let card1 = playerHand[0].src;
-    let card2 = playerHand[1].src;
+    let card2 = "";
+    if (playerHand.length == 1){
+        card2 = card1;
+    } else {
+        card2 = playerHand[1].src;
 
+    }
+    // let card2 = playerHand[1].src;
     
+    card1Name = Array.from(cards.keys()).find(key => cards.get(key) === card1);
+    console.log("card1 get value: " + getValue(card1Name));
+    card2Name = Array.from(cards.keys()).find(key => cards.get(key) === card2);
     document.getElementById("player1-hand").innerHTML = ""; // clear current hand
 
-   
+    // playersSum[player] = getValue(cardVal);
+    // playersSum[player+1] = getValue(cardVal);
+    // let card = deck.pop();
+
     // let hand1 = document.createElement("div");
     // let hand2 = document.createElement("div");
 	// hand1.id = "players";
@@ -224,17 +240,19 @@ function splitHand(player) {
     
     // document.getElementById("player1-hand").appendChild(hand1);
     // document.getElementById("player1-hand").appendChild(hand2);
-
-    playersSum.push(getValue(card1));
-    playersSum.push(getValue(card2));
-    playersAceCounts.push(checkAce(card1));
-    playersAceCounts.push(checkAce(card2));
+    playersSum = [];
+    playersSum.push(getValue(card1Name));
+    playersSum.push(getValue(card2Name));
+    playersAceCounts.push(checkAce(card1Name));
+    playersAceCounts.push(checkAce(card2Name));
     playersCanHit.push(true, true);
 
-  
-    createSplitButtons(playersSum.length - 2, "player1-hand");
-    createSplitButtons(playersSum.length - 1, "player2-hand");
+    console.log("playersSum length: " +playersSum.length);
+    console.log("Players Sum: " + playersSum);
+    createSplitButtons(playersSum.length -1 , "player1-hand");
+    createSplitButtons(playersSum.length, "player2-hand");
     document.getElementById("player1-buttons").style.display = "none";
+    document.getElementById("player2-head").style.display = "block";
     
     // let hand_children = document.getElementById("player1-hand").children[0];
     // console.log("hand_child: " + hand_children);
@@ -255,13 +273,23 @@ function createSplitButtons(handIndex, handElement) {
     console.log("handHit: " + handHit);
     console.log("handElement: " +handElement);
     console.log("handindex: " + handIndex);
-    console.log("player" + (handIndex) + "-buttons");
+    console.log("player" + handIndex + "-button1");
     if(handIndex == 2){
-        document.getElementById("player2-hand").style.display = "inline";
+        document.getElementById("player2-hand").style.display = "block";
     }
+    if(handIndex == 2){
+        let handreset = document.createElement("button");
+        handreset.className = "player-button reset-button";
+        handreset.textContent = "Reset Games";
+        handreset.addEventListener("click", playerResetFunction);
+        document.getElementById("split-reset").appendChild(handreset);
+        document.getElementById("split-reset").style.display = "block";
+    }
+    // document.getElementById("player" + handIndex + "-button1").style.display = "inline"
     // document.getElementById("player" + (handIndex) + "-hand").style.display = "inline";
     document.getElementById("player" + handIndex + "-button1").appendChild(handHit);
     document.getElementById("player" + handIndex + "-button1").appendChild(handStay);
+    document.getElementById("player" + handIndex + "-button1").style.display = "block";
 
     // console.log("hand element child: " + player_hand_children);
     // player_hand_children.appendChild(handHit);
@@ -318,7 +346,9 @@ function hit(player) {
     cardImg.setAttribute("class", "card");
     let card = deck.pop();
     cardImg.src = cards.get(card);
+    console.log("card value being added in hit: " + getValue(card));
     playersSum[player] += getValue(card);
+    console.log("player total: " + playersSum[player]);
     playersAceCounts[player] += checkAce(card);
 	console.log("finding: player" + (player + 1) + "-hand");
     document.getElementById("player" + (player + 1) + "-hand").append(cardImg);
@@ -330,6 +360,7 @@ function hit(player) {
 
     if (playersSum[player] >= 21){
         document.getElementById("player1-hit").setAttribute("class", "player-button hit-button inactive");
+        document.getElementById("player1-hit").disabled = true;
     }
 }
 
@@ -363,6 +394,7 @@ function stay(player) {
     }
 
     document.getElementById("dealer-sum").innerText = dealerSum;
+    console.log("setting text at: " + "player"+(player)+"-sum");
     document.getElementById("player"+(player+1)+"-sum").innerText = playersSum[player];
     document.getElementById("results").innerText = message;
 }
@@ -380,7 +412,8 @@ function resetGame(player) {
     playersCanHit = []; 
     
     // hidden.src = "";
-
+    document.getElementById("player1-button1").innerHTML = "";
+    document.getElementById("player2-button1").innerHTML = "";
     document.getElementById("dealer-hand").innerHTML = "";
     document.getElementById("player1-hand").innerHTML = "";
     document.getElementById("player1-button1").style.display = "none";
@@ -389,11 +422,37 @@ function resetGame(player) {
     document.getElementById("player2-button1").style.display = "none";
     document.getElementById("player1-sum").innerHTML = "0";
     document.getElementById("dealer-sum").innerHTML = "0";
+    document.getElementById("split-reset").style.display = "none";
+    document.getElementById("player2-head").style.display = "none";
+    document.getElementById("player1-buttons").style.display = "block";
+    
+    document.getElementById("split-reset").innerHTML = "";
+    document.getElementById("player1-hit").disabled = false;
+    // document.getElementById("player1-button1").empty();
+    // document.getElementById("player2-button1").empty();
+
+    // Get the div element
+    let divElement = document.getElementById('player1-button1'); 
+
+    // Get all buttons inside the div
+    let buttons = divElement.getElementsByTagName('button');
+
+    // Convert the HTMLCollection to an array
+    let buttonsArray = Array.from(buttons); 
+
+    // Remove each button
+    buttonsArray.forEach(button => {
+        button.remove();
+    });
+
+
 
     // let hitButton = document.getElementById("hit-button");
     document.getElementById("player1-hit").classList.remove("inactive");
     document.getElementById("player1-hit").removeEventListener("click", playerHitFunction);
     document.getElementById("player1-stay").removeEventListener("click", playerStayFunction);
+    document.getElementById("player1-reset").removeEventListener("click", playerResetFunction);
+    document.getElementById("split-reset").removeEventListener("click", playerResetFunction);
     let hidden_img = document.createElement("img");
     hidden_img.src = "https://upload.wikimedia.org/wikipedia/commons/d/d4/Card_back_01.svg";
     hidden_img.setAttribute("class", "card");

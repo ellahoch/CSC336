@@ -1,0 +1,186 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #202435
+}
+
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    background-color: #d8ecff;
+    color: #e8fffc;
+    font-size: 30px;
+    background-image: url("images/hotairballonheader.jpg");
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: 50% 25%; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+  }
+
+
+
+#top-text {
+    background-color: #add0f9;
+    color: white;
+    /* opacity: .8; */
+}
+
+
+.topnav {
+    background-color: #202435;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #add0f9;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #38b8fc;
+    color: white;
+  }
+  
+/* Main content container */
+.main-content {
+    display: flex;
+    padding: 20px;
+    margin-top: 60px; /* Add margin to account for the fixed navbar */
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 15%;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ddd;
+}
+
+/* Content area styling */
+#content-area {
+    width: 75%;
+    margin-left: 20px;
+}
+
+#content-area article {
+    margin-bottom: 20px;
+}
+
+#content-area article h2 {
+    margin-bottom: 10px;
+}
+
+.image-container {
+    display: flex;           /* Use flexbox to align the images */
+    justify-content: space-between; /* Evenly distribute space between images */
+    align-items: center;     /* Vertically center the images */
+    padding: 20px 0px;
+}
+
+/* Style each image */
+.image-container img {
+    width: 30%;   /* Each image takes up 30% of the container width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 2px; /* Optional: Rounded corners */
+}
+
+.text-flex {
+    display: flex;            /* Set up a flex container */
+    justify-content: space-between; /* Distribute space between the boxes */
+    padding: 20px;          /* Add some padding */
+}
+
+.flex-box {
+    flex: 1;                /* Make each box flexible to take up equal space */
+    margin: 0 10px;        /* Add margin between the boxes */
+    padding: 15px;         /* Add padding inside each box */
+    border-radius: 2px;    /* Optional: Add rounded corners */
+    background-color: #92d2ff; /* Optional: Light background color */
+}
+
+#hours {
+    color: darkblue;
+
+}
+
+.airshow {
+    padding-left: 4%;
+    padding-top: 10px;
+}
+
+table {
+    width: auto;
+    border-collapse: collapse; /* Merges table borders */
+    border: 1px solid black;
+    margin-top: 20px;
+
+}
+
+th, td {
+    border: 2px solid black; /* Adds borders around cells */
+    padding: 8px; /* Adds padding inside cells */
+    text-align: left; /* Aligns text to the left */
+}
+
+th {
+    background-color: #202435;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #c9e8fe;
+}
+
+#special-event {
+    font-weight: bold;
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .sidebar, #content-area {
+        width: 100%;
+        margin: 0;
+    }
+}

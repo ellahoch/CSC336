@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move and Scale the Ball</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .controls {
+            position: fixed;
+            margin-top: 20px;
+            z-index: 10;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <svg width="100%" height="100%">
+        <circle id="ball" cx="100" cy="100" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+        Sorry, your browser does not support inline SVG.
+    </svg>
+
+    <div class="controls">
+        <button onclick="moveBall('up')">Up</button>
+        <button onclick="moveBall('down')">Down</button>
+        <button onclick="moveBall('left')">Left</button>
+        <button onclick="moveBall('right')">Right</button>
+        <button onclick="changeCircleSize(1.05)">Scale Up</button>
+        <button onclick="changeCircleSize(0.95)">Scale Down</button>
+    </div>
+
+    <script>
+        const ball = document.getElementById("ball");
+
+        function moveBall(direction) {
+            const step = 10;
+            let cx = parseFloat(ball.getAttribute("cx"));
+            let cy = parseFloat(ball.getAttribute("cy"));
+            const r = parseFloat(ball.getAttribute("r"));
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+
+            if (direction === 'left' && cx - r > 0) cx -= step;
+            if (direction === 'right' && cx + r < windowWidth) cx += step;
+            if (direction === 'up' && cy - r > 0) cy -= step;
+            if (direction === 'down' && cy + r < windowHeight) cy += step;
+
+            ball.setAttribute("cx", cx);
+            ball.setAttribute("cy", cy);
+        }
+
+        function changeCircleSize(scaleFactor) {
+            let r = parseFloat(ball.getAttribute("r"));
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            const newR = Math.min(Math.max(r * scaleFactor, 10), Math.min(windowWidth, windowHeight) / 2);
+            ball.setAttribute("r", newR);
+        }
+    </script>
+
+</body>
+</html>

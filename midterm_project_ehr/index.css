@@ -30,8 +30,12 @@ body {
 
 
 #top-text {
-    background-color: #add0f9;
+    background-color: #202435;
     color: white;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #202435;
+    padding: 5px 10px;
     /* opacity: .8; */
 }
 
@@ -121,6 +125,12 @@ body {
     border-radius: 2px; /* Optional: Rounded corners */
 }
 
+#hot-air-images {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+}
+
 .text-flex {
     display: flex;            /* Set up a flex container */
     justify-content: space-between; /* Distribute space between the boxes */
@@ -131,8 +141,11 @@ body {
     flex: 1;                /* Make each box flexible to take up equal space */
     margin: 0 10px;        /* Add margin between the boxes */
     padding: 15px;         /* Add padding inside each box */
-    border-radius: 2px;    /* Optional: Add rounded corners */
-    background-color: #92d2ff; /* Optional: Light background color */
+    border-radius: 4px;    /* Optional: Add rounded corners */
+    background-color: #d0ebff;
+    border-style: solid;
+    border-color: rgb(1, 1, 97);
+    border-width: 2px;
 }
 
 #hours {
@@ -149,7 +162,8 @@ table {
     width: auto;
     border-collapse: collapse; /* Merges table borders */
     border: 1px solid black;
-    margin-top: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
 
 }
 
@@ -168,10 +182,32 @@ tr:nth-child(even) {
     background-color: #c9e8fe;
 }
 
+tr:nth-child(odd) {
+    background-color: white;
+}
+
 #special-event {
     font-weight: bold;
 }
 
+.bullet-list {
+    margin: 5px 40px;
+    line-height: 25px;
+}
+
+.event-h4 {
+    margin-top: 20px;
+    margin-bottom: 3px;
+}
+
+.balloon-festival {
+    background-color: #f8eaff;
+    padding: 6px 10px;
+}
+
+.p-space-below {
+    padding-top: 6px;
+}
 
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
